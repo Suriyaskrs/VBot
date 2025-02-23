@@ -1,0 +1,43 @@
+campuses:
+        VIT has multiple campuses:
+        -Vellore (Main campus, Tamil Nadu)
+        -Bhopal (Madhya Pradesh campus)
+        -Chennai (Tamil Nadu campus)
+        -Amaravati (Andhra Pradesh campus).
+
+VITEEE: VIT conducts the VIT Engineering Entrance Exam (VITEEE) for admission to its B.Tech programs. The exam consists of sections on Mathematics/Biology, Physics, Chemistry, English, and Aptitude. High-ranking students can avail scholarships through the "GV School Development Programme (GVSDP)."
+
+research and innovation: VIT focuses on research and innovation, collaborating with international universities and industries. Key research areas include Artificial Intelligence, Robotics, Cybersecurity, Data Science, Nanotechnology, and Biomedical Engineering. The university provides state-of-the-art research centers and funding opportunities for students and faculty.
+
+placements: VIT is well-known for its strong placement record. Reputed companies from different sectors visit the campus for recruitment. Over 700+ recruiters, including Microsoft, Amazon, Google, TCS, Wipro, Infosys, and Cognizant, hire students every year. The "Super Dream" and "Dream" offers ensure high-paying job opportunities.
+
+global recognition: VIT ranks among India's top universities and holds A++ accreditation from NAAC. It is recognized internationally by QS World University Rankings and Times Higher Education Rankings. The university has partnerships with over 300+ international universities, offering student exchange programs in the USA, UK, Germany, Australia, and Singapore.
+
+cultural activities: VIT has a vibrant campus life with numerous student-run clubs, events, and festivals.
+    - Riviera: The annual cultural festival attracts participation from universities across India with music, dance, drama, and celebrity performances.
+    - GraVITas: The techno-management festival hosts hackathons, AI challenges, robotics competitions, and innovation expos.
+    - Over 100+ student clubs focusing on robotics, literature, music, coding, entrepreneurship, and photography.
+
+infrastructure: The university offers world-class infrastructure including:
+    - Advanced laboratories with cutting-edge equipment for AI, IoT, Cybersecurity, Biotechnology, and Mechanical Engineering.
+    - A massive library with digital access to IEEE, Springer, Elsevier, and Scopus journals.
+    - 24/7 medical facilities and tie-ups with leading hospitals.
+    - Hostel accommodation options with AC/non-AC rooms and mess facilities.
+    - Indoor and outdoor sports complexes with training for cricket, football, basketball, badminton, and swimming.
+    - Shuttle transport services and well-connected public transport for commuting.
+
+academic programs:
+    - Undergraduate Programs: B.Tech (CSE, AI & ML, ECE, Mechanical, Civil, Biotechnology, etc.), B.Sc. (Data Science, Physics, Chemistry, Mathematics), BBA (Business Administration with specializations in Finance, Marketing, HR, and Analytics), B.Arch, BA LLB, BBA LLB.
+    - Postgraduate Programs: M.Tech (AI, Cybersecurity, Data Science, Power Electronics, etc.), MBA (Finance, HR, Marketing, Business Analytics), M.Sc. (Physics, Chemistry, Applied Mathematics, Data Science), MCA (Master of Computer Applications).
+    - PhD & Research: VIT offers PhD programs in engineering, sciences, management, and humanities, with research grants and funding opportunities.
+
+rubrics and grading system: VIT follows a relative grading system with continuous assessment. The grading structure includes:
+    - Letter Grades: S (Outstanding), A, B, C, D, E (Pass), and F (Fail).
+    - Grade Points: S (10), A (9), B (8), C (7), D (6), E (5), F (0).
+    - Assessment Components:
+        - CAT (Continuous Assessment Test) - 50%
+        - FAT (Final Assessment Test) - 50%
+        - Lab components and project work have separate weightage.
+    - GPA & CGPA Calculation: The Grade Point Average (GPA) is calculated for each semester, and the Cumulative Grade Point Average (CGPA) is maintained throughout the course.
+    - Attendance Requirement: A minimum of 75% attendance is mandatory for appearing in exams.
+    - Supplementary Exams: Students who fail in a subject must take a re-exam or repeat the course.
