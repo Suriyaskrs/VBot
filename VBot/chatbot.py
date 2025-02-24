@@ -23,7 +23,7 @@ stop_words = set(stopwords.words('english'))
 
 def initialize_chatbot():
     global sent_tokens, word_tokens, stop_words
-
+    nltk.download('punkt_tab') #comment it after running 1 time
     # Load and process data
     #replace your file path accordingly
     # Load and process data from GitHub
