@@ -41,7 +41,7 @@ def initialize_chatbot():
     # Load and process data
     #replace your file path accordingly
     # Load and process data from GitHub
-    url = 'https://raw.githubusercontent.com/Suriyaskrs/VBot/main/VBot/VIT.txt' 
+    url = 'https://raw.githubusercontent.com/Suriyaskrs/VBot/refs/heads/main/VBot/VIT.txt' 
     response = requests.get(url)
 
     if response.status_code == 200:  # Ensure successful fetch
