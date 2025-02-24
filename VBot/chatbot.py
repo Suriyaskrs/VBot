@@ -24,7 +24,8 @@ def initialize_chatbot():
     global sent_tokens, word_tokens, stop_words
 
     # Load and process data
-    with open('VIT.txt', 'r', encoding='utf8', errors='ignore') as fin:
+    #replace your file path accordingly
+    with open('https://raw.githubusercontent.com/Suriyaskrs/VBot/refs/heads/main/VBot/VIT.txt', 'r', encoding='utf8', errors='ignore') as fin:
         raw = fin.read().lower()
 
     sent_tokens = raw.split("\n\n")
