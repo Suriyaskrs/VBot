@@ -25,8 +25,14 @@ def initialize_chatbot():
 
     # Load and process data
     #replace your file path accordingly
-    with open('https://raw.githubusercontent.com/Suriyaskrs/VBot/refs/heads/main/VBot/VIT.txt', 'r', encoding='utf8', errors='ignore') as fin:
-        raw = fin.read().lower()
+    # Load and process data from GitHub
+    url = 'https://raw.githubusercontent.com/Suriyaskrs/VBot/main/VBot/VIT.txt' 
+    response = requests.get(url)
+
+    if response.status_code == 200:  # Ensure successful fetch
+        raw = response.text.lower()  # Get file content
+    else:
+        raise Exception("Failed to load chatbot data. Check the file URL.")
 
     sent_tokens = raw.split("\n\n")
     word_tokens = nltk.word_tokenize(raw)
