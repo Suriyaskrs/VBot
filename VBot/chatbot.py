@@ -49,7 +49,7 @@ def initialize_chatbot():
     else:
         raise Exception("Failed to load chatbot data. Check the file URL.")
 
-    sent_tokens = raw.split("\n")
+    sent_tokens = raw.split("\n\n")
     word_tokens = nltk.word_tokenize(raw)
 
     stop_words.update(set(stopwords.words('english')))  # Load stopwords
