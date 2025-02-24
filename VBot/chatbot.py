@@ -23,7 +23,20 @@ stop_words = set(stopwords.words('english'))
 
 def initialize_chatbot():
     global sent_tokens, word_tokens, stop_words
-    nltk.download('punkt_tab') #comment it after running 1 time
+
+    
+    nltk_data_path = "/home/appuser/nltk_data"  # Adjust based on your environment
+    os.makedirs(nltk_data_path, exist_ok=True)  # Ensure directory exists
+    nltk.data.path.append(nltk_data_path)  # Add to NLTK search paths
+
+    # Ensure 'punkt' is available before using it
+    try:
+        nltk.data.find("tokenizers/punkt")
+    except LookupError:
+        nltk.download("punkt", download_dir=nltk_data_path)
+    
+
+  
     # Load and process data
     #replace your file path accordingly
     # Load and process data from GitHub
