@@ -11,11 +11,18 @@ import nltk
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
 
-nltk.download('popular', quiet=True)  # for downloading necessary packages
+# Ensure necessary NLTK data is available
+nltk_data_path = os.path.join(os.getcwd(), "nltk_data")
+os.makedirs(nltk_data_path, exist_ok=True)
+nltk.data.path.append(nltk_data_path)
+
+nltk.download('punkt', download_dir=nltk_data_path)
+nltk.download('stopwords', download_dir=nltk_data_path)
+nltk.download('wordnet', download_dir=nltk_data_path)
 
 warnings.filterwarnings('ignore')
 
-# Reading in the corpus
+# Initialize chatbot variables
 sent_tokens = []
 word_tokens = []
 lemmer = WordNetLemmatizer()
@@ -25,27 +32,12 @@ stop_words = set(stopwords.words('english'))
 def initialize_chatbot():
     global sent_tokens, word_tokens, stop_words
 
-    
-    nltk_data_path = "/home/appuser/nltk_data"  # Adjust based on your environment
-    os.makedirs(nltk_data_path, exist_ok=True)  # Ensure directory exists
-    nltk.data.path.append(nltk_data_path)  # Add to NLTK search paths
-
-    # Ensure 'punkt' is available before using it
-    try:
-        nltk.data.find("tokenizers/punkt")
-    except LookupError:
-        nltk.download("punkt", download_dir=nltk_data_path)
-    
-
-  
-    # Load and process data
-    #replace your file path accordingly
-    # Load and process data from GitHub
-    url = 'https://raw.githubusercontent.com/Suriyaskrs/VBot/refs/heads/main/VBot/VIT.txt' 
+    # Load data from GitHub
+    url = 'https://raw.githubusercontent.com/Suriyaskrs/VBot/main/VBot/VIT.txt'  # Fixed URL
     response = requests.get(url)
 
-    if response.status_code == 200:  # Ensure successful fetch
-        raw = response.text.lower()  # Get file content
+    if response.status_code == 200:
+        raw = response.text.lower()
     else:
         raise Exception("Failed to load chatbot data. Check the file URL.")
 
@@ -81,31 +73,36 @@ def greeting(sentence):
 # Levenshtein Distance Handling for Typos
 def get_best_match(user_query):
     best_match, score, _ = process.extractOne(user_query, sent_tokens)
-    if score > 60:  # Threshold for similarity
+    if score > 60:
         return best_match
     return None
 
 
 # Generating response
 def response(user_response):
+    if not sent_tokens:  # Ensure chatbot is initialized only once
+        initialize_chatbot()
+
     robo_response = ''
-    initialize_chatbot()
+
     # Compute similarity using TF-IDF
     TfidfVec = TfidfVectorizer(tokenizer=LemNormalize, stop_words='english')
-    tfidf = TfidfVec.fit_transform(sent_tokens + [user_response])  # Ensure user input is last
-    vals = cosine_similarity(tfidf[-1], tfidf[:-1])  # Compare user input with all knowledge base entries
+    tfidf = TfidfVec.fit_transform(sent_tokens + [user_response])
+    vals = cosine_similarity(tfidf[-1], tfidf[:-1])
 
     # Get best match
-    idx = np.argmax(vals)  # Get index of the best matching entry
+    idx = np.argmax(vals)
     best_score = np.max(vals)
 
-    # Set a threshold (adjustable)
-    threshold = 0.2  # Lower threshold means more tolerance for errors
+    # Set a threshold
+    threshold = 0.2
 
-    if best_score < threshold:  # If similarity is too low, return a default response
+    if best_score < threshold:
         return "I am sorry! I don't understand you."
 
-    # Return best match
     robo_response = sent_tokens[idx]
     return robo_response
 
+
+# Initialize chatbot before starting the Streamlit app
+initialize_chatbot()
