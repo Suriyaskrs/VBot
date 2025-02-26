@@ -19,6 +19,8 @@ nltk.data.path.append(nltk_data_path)
 nltk.download('punkt', download_dir=nltk_data_path)
 nltk.download('stopwords', download_dir=nltk_data_path)
 nltk.download('wordnet', download_dir=nltk_data_path)
+nltk.download('punkt_tab', download_dir=nltk_data_path)
+
 
 warnings.filterwarnings('ignore')
 
